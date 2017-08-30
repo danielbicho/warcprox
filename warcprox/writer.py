@@ -37,7 +37,7 @@ class WarcWriter:
 
     def __init__(self, options=warcprox.Options()):
 
-        self.rollover_size = options.rollover_size or 1000000000
+        self.rollover_size = options.size or 1000000000
         self.rollover_idle_time = options.rollover_idle_time or None
         self._last_activity = time.time()
 
